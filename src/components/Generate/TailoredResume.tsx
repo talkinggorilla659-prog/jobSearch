@@ -106,15 +106,15 @@ export function TailoredResume() {
   };
 
   const handleDownloadPdf = async () => {
-    if (!job || !resume || viewMode !== 'preview') return;
+    if (!job || !resume) return;
 
     setIsPdfLoading(true);
     setDownloadError(null);
 
     try {
-      // Capture the preview element directly - what you see is what you get
-      const { generateResumePDFFromPreview } = await import('../../lib/html-to-pdf');
-      const blob = await generateResumePDFFromPreview();
+      // Use @react-pdf/renderer for proper PDF generation
+      const { generateResumePDF } = await import('../../lib/resume-pdf');
+      const blob = await generateResumePDF(resume, previewTemplate);
       const filename = `Resume_${job.company.replace(/\s+/g, '_')}_${job.title.replace(/\s+/g, '_')}.pdf`;
       downloadBlob(blob, filename);
     } catch {
@@ -368,8 +368,7 @@ export function TailoredResume() {
             <Button
               onClick={handleDownloadPdf}
               variant="secondary"
-              disabled={isPdfLoading || viewMode !== 'preview'}
-              title={viewMode !== 'preview' ? 'Switch to preview mode to download PDF' : ''}
+              disabled={isPdfLoading}
             >
               {isPdfLoading ? (
                 <>
