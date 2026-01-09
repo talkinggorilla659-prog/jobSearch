@@ -1,0 +1,65 @@
+{
+  "name": "jobhunt",
+  "version": "1.0.0",
+  "description": "A privacy-first, AI-powered job search assistant that helps you track applications, tailor resumes, generate cover letters, and prepare for interviews",
+  "license": "GPL-3.0",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "keywords": [
+    "job-search",
+    "job-tracker",
+    "ai",
+    "resume",
+    "cover-letter",
+    "interview-prep",
+    "claude",
+    "openai",
+    "career"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.24.0",
+    "@react-pdf/renderer": "^4.3.2",
+    "@uiw/react-md-editor": "^4.0.11",
+    "dexie": "^4.0.0",
+    "dexie-react-hooks": "^1.1.7",
+    "docx": "^8.0.0",
+    "html2pdf.js": "^0.13.0",
+    "marked": "^17.0.1",
+    "openai": "^4.0.0",
+    "pdfjs-dist": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.22.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}
